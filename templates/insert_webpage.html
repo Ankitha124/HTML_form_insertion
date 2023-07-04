@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+</head>
+<body>
+    <center>
+        <h1>insert_webpage Form</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+           <label for="topic">Topic_name</label>
+            <!-- <input type="text" name="topic" id="topic" placeholder="Enter topic name"><br><br>
+           -->
+           <select name="topic" id="topic">
+            <option value="{{to}}">-----</option>
+           
+            {% for to in topic %}
+            <option value="{{to}}">{{to.topic_name}}</option>
+
+
+            {% endfor %}
+           </select><br><br>
+            <label for="nm">name</label>
+            <input type="text" name="nm" id="nm" placeholder="Enter name "><br><br>
+            
+            <label for="u">URL</label>
+            <input type="url" name="u" id="u" placeholder="enter url"><br><br>
+
+    
+            <input type="submit" value="insert_webpage">
+
+
+        </form>
+    </center>
+
+    
+</body>
+</html>

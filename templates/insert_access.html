@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>access</title>
+</head>
+<body>
+    <center>
+        <h1>insert_acess Form</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            
+            
+            <label for="nm">name</label>
+            <!--<input type="text" name="nm" id="nm" placeholder="enter name"><br><br>-->
+            <select name="nm" id="nm">
+                <option value="{{to}}">-----</option>
+
+                {% for wo in nm %}
+
+                <option value="{{wo}}">{{wo.name}}</option>
+                {% endfor %}
+            </select><br><br>
+              
+            <label for="d">Date</label>
+            <input type="date" name="d" id="d" placeholder="enter date"><br><br>
+
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" placeholder="enter author name"><br><br>
+
+    
+            <input type="submit" value="insert_access">
+
+
+        </form>
+    </center>
+    
+</body>
+</html>
