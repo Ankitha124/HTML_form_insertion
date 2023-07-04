@@ -26,5 +26,6 @@ urlpatterns = [
     path('insert_access/',insert_access,name='insert_access'),
     path('retrieve_webpage/',retrieve_webpage,name='retrieve_webpage'),
     #path('display_webpage/',display_webpage,name='display_webpage')
+    path('checkbox/',checkbox,name='checkbox'),
 
 ]

@@ -76,6 +76,12 @@ def retrieve_webpage(request):
 
     return render(request,'retrieve_webpage.html',d)
 
+def checkbox(request):
+    LTO=Topic.objects.all()
+    d={'LTO':LTO}
+
+
+    return render(request,'checkbox.html',d)
 
 
 
